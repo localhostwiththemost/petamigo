@@ -1,0 +1,26 @@
+.button-container {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.hero-btn {
+  border: none;
+  border-radius: 5px;
+  padding: 2rem;
+  cursor: pointer;
+  height: 2rem;
+  background-color: $color-main-white;
+  display: flex;
+  align-items: center;
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.selected {
+  background-color: $color-mustard-yellow;
+}

@@ -1,0 +1,39 @@
+.about-section {
+  background-color: $color-main-blue;
+  padding: 10rem 0 20rem 0;
+  position: relative;
+}
+
+.text-container {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 12rem;
+}
+
+.about-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 3rem;
+  max-width: 70rem;
+  word-wrap: break-word;
+  color: $color-main-white;
+  text-align: center;
+}
+
+.nosy-img {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 30rem;
+}
+
+.about-link {
+  color: $color-mustard-yellow;
+  text-decoration: none;
+  font-weight: 800;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

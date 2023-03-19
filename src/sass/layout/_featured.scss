@@ -1,0 +1,24 @@
+.featured-section {
+  background-color: $color-main-white;
+  padding: 3rem 0 20rem 0;
+}
+
+.heading-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.featured-heading {
+  color: $color-main-blue;
+font-size: 3rem;
+}
+
+.featured-text {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.4rem;
+  max-width: 70rem;
+  word-wrap: break-word;
+  color: $color-main-blue;
+}

@@ -1,0 +1,28 @@
+.facts-section {
+  background-color: $color-main-blue;
+  padding: 20rem 0 20rem 0;
+}
+
+.facts-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+
+  @media only screen and (max-width: 1200px) {
+    flex-direction: column;
+  }
+}
+
+.facts-text {
+  font-size: 2.5rem;
+  font-weight: 600;
+  line-height: 2.8rem;
+  max-width: 70rem;
+  word-wrap: break-word;
+  color: $color-main-white;
+
+  @media only screen and (max-width: 1200px) {
+    text-align: center;
+  }
+}
