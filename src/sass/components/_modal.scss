@@ -1,0 +1,114 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal {
+  background-color: $color-main-white;
+  width: 80rem;
+  height: 50rem;
+  border-radius: $default-border-radius;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: animate 0.3s;
+  animation: animate 0.3s;
+}
+
+@-webkit-keyframes animate {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes animate {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal > ion-icon {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-size: 3rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal > ion-icon:hover {
+  color: red;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+
+.modal-pet-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.pet-info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.pet-info__description {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #000;
+}
+
+.pet-info {
+  font-size: 1.6rem;
+
+  &__name {
+    font-size: 2rem;
+    color: $color-main-blue;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-main-blue;
+  }
+}
+
+.learnmore-link {
+  text-decoration: none;
+  background-color: $color-main-blue;
+  color: $color-main-white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: $default-border-radius;
+  font-size: 1.8rem;
+  font-weight: 600;
+}

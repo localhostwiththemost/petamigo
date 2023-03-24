@@ -8,12 +8,15 @@ import { PETFINDER_API_KEY, PETFINDER_API_SECRET } from "./env";
 function App() {
   const [selected, setSelected] = useState("dog");
   const [pets, setPets] = useState([]);
+  const [searchTerm, setSearchTerm] = useState("");
+  const [loading, setLoading] = useState(null);
 
   const key = PETFINDER_API_KEY;
 
   const secret = PETFINDER_API_SECRET;
 
-  const searchPets = (category, location) => {
+  const searchPets = (location) => {
+    setLoading(true);
     fetch("https://api.petfinder.com/v2/oauth2/token", {
       method: "POST",
       body:
@@ -30,10 +33,10 @@ function App() {
       })
       .then(function (data) {
         const locationQ = !location ? "" : `&location=${location}`;
-        const typeQ = !category ? "" : `&type=${category}`;
+        const petType = !selected ? "" : `&type=${selected}`;
 
         return fetch(
-          `https://api.petfinder.com/v2/animals?limit=50${typeQ}${locationQ}`,
+          `https://api.petfinder.com/v2/animals?limit=50${petType}${locationQ}`,
           {
             headers: {
               Authorization: data.token_type + " " + data.access_token,
@@ -45,13 +48,10 @@ function App() {
       .then((res) => res.json())
       .then(function (data) {
         console.log(data.animals);
+        setLoading(false);
         setPets(data.animals);
       });
   };
-
-  useEffect(() => {
-    searchPets();
-  }, []);
 
   return (
     <>
@@ -126,11 +126,18 @@ function App() {
 
             <div className="icon-container">
               <div className="search">
-                <form>
+                <form
+                  onSubmit={(e) => {
+                    e.preventDefault();
+                    searchPets(searchTerm);
+                  }}
+                >
                   <input
                     type="text"
                     placeholder="Enter City & State or Zipcode"
                     maxLength="50"
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    spellCheck="false"
                   />
                   <ion-icon name="search-outline"></ion-icon>
                 </form>
@@ -146,7 +153,7 @@ function App() {
         />
       </header>
 
-      <Results pets={pets} />
+      <Results pets={pets} loading={loading} />
 
       <Facts />
 
