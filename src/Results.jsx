@@ -21,31 +21,6 @@ function Results(props) {
 
   return (
     <>
-      {/* <section className="results-section">
-        <div className="petcard-container">
-          {props.loading ? (
-            <div className="empty">
-              <Loader />
-            </div>
-          ) : props.pets ? (
-            props.pets.map((pet) => (
-              <PetCard
-                pet={pet}
-                key={pet.id}
-                onClick={() => handlePetCardClick(pet)}
-              />
-            ))
-          ) : (
-            <h1 className="default-results-heading">
-              Pets Available For Adoption
-            </h1>
-          )}
-        </div>
-        {showModal && (
-          <Modal selectedPet={selectedPet} onClose={handleModalClose} />
-        )}
-      </section> */}
-
       <section className="results-section">
         {props.loading === true ? (
           <div className="empty">

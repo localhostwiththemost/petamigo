@@ -22,6 +22,19 @@
   transform: translate(-50%, -50%);
   -webkit-animation: animate 0.3s;
   animation: animate 0.3s;
+
+  @media only screen and (max-width: 900px) {
+    height: 60rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 60rem;
+    height: 50rem;
+  }
+
+  @media only screen and (max-width: 375px) {
+  width: 40rem;
+  }
 }
 
 @-webkit-keyframes animate {
@@ -62,22 +75,41 @@
 .modal-content {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: 600px) {
+  left: 42%;
+  }
 }
 
 .modal-pet-info {
   display: flex;
   flex-direction: row;
   gap: 5rem;
+
+  @media only screen and (max-width: 600px) {
+  gap: 3rem;
+  }
+}
+
+.modal-pet-info img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media only screen and (max-width: 600px) {
+    max-width: 50%;
+  }
 }
 
 .pet-info__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .pet-info__description {

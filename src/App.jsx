@@ -1,7 +1,8 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Results from "./Results";
 import Facts from "./Facts";
+import UploadForm from "./UploadForm"; 
 import "./sass/main.css";
 import { PETFINDER_API_KEY, PETFINDER_API_SECRET } from "./env";
 
@@ -10,6 +11,14 @@ function App() {
   const [pets, setPets] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(null);
+  const resultsRef = useRef(null);
+
+  // Scrolls to Results section when user searches
+  useEffect(() => {
+    if (pets.length > 0 && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [pets]);
 
   const key = PETFINDER_API_KEY;
 
@@ -139,7 +148,13 @@ function App() {
                     onChange={(e) => setSearchTerm(e.target.value)}
                     spellCheck="false"
                   />
-                  <ion-icon name="search-outline"></ion-icon>
+                  <ion-icon
+                    name="search-outline"
+                    onClick={(e) => {
+                      e.preventDefault();
+                      searchPets(searchTerm);
+                    }}
+                  ></ion-icon>
                 </form>
               </div>
             </div>
@@ -153,7 +168,9 @@ function App() {
         />
       </header>
 
-      <Results pets={pets} loading={loading} />
+      <div ref={resultsRef}>
+        <Results pets={pets} loading={loading} />
+      </div>
 
       <Facts />
 
@@ -161,10 +178,7 @@ function App() {
         <div className="heading-container">
           <h1 className="featured-heading">Featured Pets</h1>
         </div>
-        {/* <p className="featured-text">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid,
-          libero impedit? Nam quo iure possimus vero magnam nisi sapiente ipsam.
-        </p> */}
+        <UploadForm />
       </section>
 
       <section className="about-section">

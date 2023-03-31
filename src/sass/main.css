@@ -86,6 +86,22 @@ body {
   -webkit-animation: animate 0.3s;
   animation: animate 0.3s;
 }
+@media only screen and (max-width: 900px) {
+  .modal {
+    height: 60rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 60rem;
+    height: 50rem;
+  }
+}
+@media only screen and (max-width: 375px) {
+  .modal {
+    width: 40rem;
+  }
+}
 
 @-webkit-keyframes animate {
   from {
@@ -123,10 +139,15 @@ body {
 .modal-content {
   position: fixed;
   top: 50%;
-  left: 50%;
+  left: 40%;
   -webkit-transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    left: 42%;
+  }
 }
 
 .modal-pet-info {
@@ -134,11 +155,28 @@ body {
   flex-direction: row;
   gap: 5rem;
 }
+@media only screen and (max-width: 600px) {
+  .modal-pet-info {
+    gap: 3rem;
+  }
+}
+
+.modal-pet-info img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+@media only screen and (max-width: 600px) {
+  .modal-pet-info img {
+    max-width: 50%;
+  }
+}
 
 .pet-info__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  gap: 2rem;
 }
 
 .pet-info__description {
@@ -309,6 +347,9 @@ body {
   height: 24px;
   cursor: pointer;
   color: #000;
+}
+.search ion-icon:hover {
+  color: #5175f8;
 }
 
 .about-section {
@@ -487,7 +528,7 @@ nav {
 
 .results-section {
   background-color: #f9f7f6;
-  padding: 15rem 0 15rem 0;
+  padding: 10rem 0 10rem 0;
 }
 
 .default-results-heading {
