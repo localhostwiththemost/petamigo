@@ -352,6 +352,38 @@ body {
   color: #5175f8;
 }
 
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+.upload-form button {
+  margin-top: 2rem;
+  border-radius: 10rem;
+  background-color: #f9f7f6;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  border: none;
+  font-size: 1.6rem;
+  cursor: pointer;
+}
+.upload-form input {
+  background-color: #f9f7f6;
+  color: #000;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  height: 4rem;
+  padding-inline-start: 3rem;
+  padding-inline-end: 3rem;
+  padding: 0.5rem 1rem 0.5rem 1rem;
+  outline: 0;
+  flex: 1;
+  align-self: center;
+}
+
 .about-section {
   background-color: #5175f8;
   padding: 10rem 0 20rem 0;
@@ -454,10 +486,6 @@ header {
   position: relative;
 }
 
-nav {
-  padding: 1rem 2rem 1rem 2rem;
-}
-
 .header-content-container {
   display: flex;
   justify-content: center;
@@ -471,19 +499,6 @@ nav {
   .header-content-container {
     padding: 30rem 10rem 30rem 10rem;
   }
-}
-
-.nav-title {
-  font-size: 3rem;
-  font-weight: 800;
-  display: flex;
-  align-items: center;
-}
-
-.title-icon {
-  display: inline-flex;
-  align-items: center;
-  transform: rotate(17deg);
 }
 
 .hero-text {
@@ -526,6 +541,45 @@ nav {
   }
 }
 
+nav {
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: #5175f8;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav-title {
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  color: #f9f7f6;
+}
+
+.title-icon {
+  display: inline-flex;
+  align-items: center;
+  transform: rotate(17deg);
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f9f7f6;
+  text-decoration: none;
+}
+.nav-link:hover {
+  color: #f8d451;
+}
+
 .results-section {
   background-color: #f9f7f6;
   padding: 10rem 0 10rem 0;
@@ -556,6 +610,32 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.submit-section {
+  background-color: #5175f8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.submit-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: #f9f7f6;
+}
+
+.submit-description {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  max-width: 70rem;
+  word-wrap: break-word;
+  text-align: center;
+  color: #f9f7f6;
 }
 
 /*# sourceMappingURL=main.css.map */

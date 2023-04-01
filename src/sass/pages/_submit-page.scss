@@ -1,0 +1,25 @@
+.submit-section {
+  background-color: $color-main-blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  height: 100vh;
+}
+
+.submit-title {
+  font-size: 4.2rem;
+  font-weight: 800;
+  color: $color-main-white;
+}
+
+.submit-description {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+  max-width: 70rem;
+  word-wrap: break-word;
+  text-align: center;
+  color: $color-main-white;
+}

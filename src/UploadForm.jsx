@@ -23,7 +23,7 @@ function UploadForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="upload-form" onSubmit={handleSubmit}>
       <input
         type="text"
         value={name}
