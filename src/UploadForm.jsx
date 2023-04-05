@@ -29,38 +29,44 @@ function UploadForm() {
         value={name}
         placeholder="Name"
         onChange={(e) => setName(e.target.value)}
+        required
       />
       <input
         type="text"
         value={gender}
         placeholder="Gender"
         onChange={(e) => setGender(e.target.value)}
+        required
       />
       <input
         type="text"
         value={breed}
         placeholder="Breed"
         onChange={(e) => setBreed(e.target.value)}
+        required
       />
       <input
         type="text"
         value={city}
         placeholder="City"
         onChange={(e) => setCity(e.target.value)}
+        required
       />
       <input
         type="text"
         value={email}
         placeholder="Email"
         onChange={(e) => setEmail(e.target.value)}
+        required
       />
       <input
         type="text"
         value={phone}
         placeholder="Phone"
         onChange={(e) => setPhone(e.target.value)}
+        required
       />
-    <button>Submit</button>
+      <button>Submit</button>
     </form>
   );
 }

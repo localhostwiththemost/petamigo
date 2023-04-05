@@ -369,6 +369,9 @@ body {
   font-size: 1.6rem;
   cursor: pointer;
 }
+.upload-form button:hover {
+  background-color: #f8d451;
+}
 .upload-form input {
   background-color: #f9f7f6;
   color: #000;
@@ -636,6 +639,12 @@ nav {
   word-wrap: break-word;
   text-align: center;
   color: #f9f7f6;
+}
+
+.asterisk-text {
+  color: #f8d451;
+  font-size: 1.8rem;
+  font-size: 600;
 }
 
 /*# sourceMappingURL=main.css.map */
