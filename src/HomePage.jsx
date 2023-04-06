@@ -1,6 +1,8 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { PETFINDER_API_KEY, PETFINDER_API_SECRET } from "./env";
+import { db } from "./firebase";
+import { getDocs, collection } from "firebase/firestore";
 
 import Results from "./Results";
 import Facts from "./Facts";
@@ -11,6 +13,28 @@ function HomePage() {
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(null);
   const resultsRef = useRef(null);
+  const petCollectionRef = collection(db, "petCollection");
+
+  const [featuredPets, setFeaturedPets] = useState([]);
+
+  useEffect(() => {
+    const getFeaturedPets = async () => {
+      try {
+        const data = await getDocs(petCollectionRef);
+        const filteredData = data.docs.map((doc) => ({
+          ...doc.data(),
+          id: doc.id,
+        }));
+        console.log(filteredData);
+        setFeaturedPets(filteredData);
+        console.log(featuredPets);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    getFeaturedPets();
+  }, []);
 
   // Scrolls to Results section when user searches
   useEffect(() => {
@@ -167,6 +191,32 @@ function HomePage() {
       <section className="featured-section">
         <div className="heading-container">
           <h1 className="featured-heading">Featured Pets</h1>
+        </div>
+
+        <div className="petcard-container">
+          {featuredPets.length > 0
+            ? featuredPets.map((pet) => {
+               return (
+               <div className="pet-card" key={pet.id}>
+                  <div>
+                    <img
+                      src={"https://via.placeholder.com/400"}
+                      alt="A pet available for adoption"
+                      className="pet-img"
+                    />
+                  </div>
+
+                  <div className="card-info__container">
+                    <h1 className="pet-name">{pet.name}</h1>
+                    <h2>{pet.breed}</h2>
+                    <h2>
+                      {pet.city}, {pet.city}
+                    </h2>
+                  </div>
+                </div>
+               );  
+            })
+            : ""}
         </div>
       </section>
 
