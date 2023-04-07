@@ -3,7 +3,6 @@ import { Auth } from "./Auth";
 import UploadForm from "./UploadForm";
 
 function SubmitPage({loggedIn}) {
-  console.log(loggedIn);
 
   return (
     <>

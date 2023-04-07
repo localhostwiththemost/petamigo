@@ -1,4 +1,4 @@
-import { getFirestore, collection, addDoc } from "firebase/firestore";
+import {  collection, addDoc } from "firebase/firestore";
 
 
 // Add a document to the "petCollection" collection

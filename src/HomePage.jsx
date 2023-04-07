@@ -196,26 +196,30 @@ function HomePage() {
         <div className="petcard-container">
           {featuredPets.length > 0
             ? featuredPets.map((pet) => {
-               return (
-               <div className="pet-card" key={pet.id}>
-                  <div>
-                    <img
-                      src={"https://via.placeholder.com/400"}
-                      alt="A pet available for adoption"
-                      className="pet-img"
-                    />
-                  </div>
+                return (
+                  <div className="pet-card" key={pet.id}>
+                    <div>
+                      <img
+                        src={
+                          pet.imageUrl
+                            ? `${pet.imageUrl}`
+                            : "https://via.placeholder.com/400"
+                        }
+                        alt="A pet available for adoption"
+                        className="pet-img"
+                      />
+                    </div>
 
-                  <div className="card-info__container">
-                    <h1 className="pet-name">{pet.name}</h1>
-                    <h2>{pet.breed}</h2>
-                    <h2>
-                      {pet.city}, {pet.city}
-                    </h2>
+                    <div className="card-info__container">
+                      <h1 className="pet-name">{pet.name}</h1>
+                      <h2>{pet.breed}</h2>
+                      <h2>
+                        {pet.city}, {pet.city}
+                      </h2>
+                    </div>
                   </div>
-                </div>
-               );  
-            })
+                );
+              })
             : ""}
         </div>
       </section>
