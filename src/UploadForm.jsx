@@ -7,6 +7,7 @@ function UploadForm() {
   const [gender, setGender] = useState("");
   const [breed, setBreed] = useState("");
   const [city, setCity] = useState("");
+  const [state, setState] = useState("");
   const [email, setEmail] = useState("");
   const [phone, setPhone] = useState("");
   const [fileUpload, setFileUpload] = useState(null);
@@ -14,7 +15,7 @@ function UploadForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    let petData = { name, gender, breed, city, email, phone };
+    let petData = { name, gender, breed, city, state, email, phone };
     if (fileUpload) {
       const reader = new FileReader();
       reader.readAsDataURL(fileUpload);
@@ -67,6 +68,13 @@ function UploadForm() {
           value={city}
           placeholder="City"
           onChange={(e) => setCity(e.target.value)}
+          required
+        />
+        <input
+          type="text"
+          value={state}
+          placeholder="State"
+          onChange={(e) => setState(e.target.value)}
           required
         />
         <input
