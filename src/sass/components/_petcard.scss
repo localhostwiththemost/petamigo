@@ -3,6 +3,12 @@
   flex-direction: column;
   padding: 1rem 1.5rem 1rem 1.5rem;
   color: $color-main-white;
+
+  @media only screen and (max-width: 1200px) {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
 }
 
 .pet-img {
@@ -13,6 +19,22 @@
 .pet-name {
   color: $color-mustard-yellow;
   font-size: 1.8rem;
+
+  @media only screen and (max-width: 1200px) {
+  font-size: 3rem;
+  }
+}
+
+.pet-breed {
+  @media only screen and (max-width: 1200px) {
+  font-size: 2rem;
+  }
+}
+
+.pet-location {
+  @media only screen and (max-width: 1200px) {
+  font-size: 2rem;
+  }
 }
 
 .pet-card {

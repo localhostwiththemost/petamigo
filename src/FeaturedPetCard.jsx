@@ -18,8 +18,8 @@ function FeaturedPetCard({ pet, onClick }) {
 
         <div className="card-info__container">
           <h1 className="pet-name">{pet.name}</h1>
-          <h2>{pet.breed}</h2>
-          <h2>
+          <h2 className="pet-breed">{pet.breed}</h2>
+          <h2 className="pet-location">
             {pet.city}, {pet.state}
           </h2>
         </div>

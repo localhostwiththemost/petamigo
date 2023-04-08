@@ -33,7 +33,7 @@
   }
 
   @media only screen and (max-width: 375px) {
-  width: 40rem;
+  width: 45rem;
   }
 }
 
@@ -83,6 +83,10 @@
   @media only screen and (max-width: 600px) {
   left: 42%;
   }
+
+  @media only screen and (max-width: 600px) {
+  left: 36%;
+  }
 }
 
 .modal-pet-info {
@@ -93,12 +97,20 @@
   @media only screen and (max-width: 600px) {
   gap: 3rem;
   }
+
+  @media only screen and (max-width: 375px) {
+  gap: 1rem;
+  }
 }
 
 .modal-pet-info img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+
+  @media only screen and (max-width: 1800px) {
+  max-width: 60%;
+  }
 
   @media only screen and (max-width: 600px) {
     max-width: 50%;
@@ -112,6 +124,13 @@
   gap: 2rem;
 }
 
+.featured-pet-info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .pet-info__description {
   white-space: nowrap;
   display: flex;
@@ -122,6 +141,10 @@
 
 .pet-info {
   font-size: 1.6rem;
+  @media only screen and (max-width: 375px) {
+  font-size: 1.4rem;
+  }
+
 
   &__name {
     font-size: 2rem;

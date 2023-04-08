@@ -1,11 +1,9 @@
 import React from "react";
 import { useState, useEffect, useRef } from "react";
 import { PETFINDER_API_KEY, PETFINDER_API_SECRET } from "./env";
-
 import FeaturedPets from "./FeaturedPets";
 import Results from "./Results";
 import Facts from "./Facts";
-import FeaturedPetCard from "./FeaturedPetCard";
 
 function HomePage() {
   const [selected, setSelected] = useState("dog");
@@ -57,7 +55,6 @@ function HomePage() {
       })
       .then((res) => res.json())
       .then(function (data) {
-        console.log(data.animals);
         setLoading(false);
         setPets(data.animals);
       });

@@ -13,7 +13,6 @@ function FeaturedPets() {
   const handlePetCardClick = (pet) => {
     setSelectedPet(pet);
     setShowModal(true);
-    console.log(pet);
   };
 
   const handleModalClose = () => {
@@ -30,7 +29,6 @@ function FeaturedPets() {
           id: doc.id,
         }));
         setFeaturedPets(filteredData);
-       // console.log(featuredPets);
       } catch (err) {
         console.log(err);
       }
@@ -38,8 +36,6 @@ function FeaturedPets() {
 
     getFeaturedPets();
   }, []);
-
-  console.log(featuredPets);
 
   return (
     <>

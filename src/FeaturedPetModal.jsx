@@ -18,7 +18,7 @@ function FeaturedPetModal({ selectedPet, onClose }) {
                   alt={`${selectedPet.name} - ${selectedPet.breed}`}
                 />
 
-                <div className="pet-info__container">
+                <div className="featured-pet-info__container">
                   <div className="pet-info__description">
                     <h1 className="pet-info__name">{selectedPet.name}</h1>
                     <h2 className="pet-info">{selectedPet.gender}</h2>

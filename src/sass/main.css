@@ -99,7 +99,7 @@ body {
 }
 @media only screen and (max-width: 375px) {
   .modal {
-    width: 40rem;
+    width: 45rem;
   }
 }
 
@@ -149,6 +149,11 @@ body {
     left: 42%;
   }
 }
+@media only screen and (max-width: 600px) {
+  .modal-content {
+    left: 36%;
+  }
+}
 
 .modal-pet-info {
   display: flex;
@@ -160,11 +165,21 @@ body {
     gap: 3rem;
   }
 }
+@media only screen and (max-width: 375px) {
+  .modal-pet-info {
+    gap: 1rem;
+  }
+}
 
 .modal-pet-info img {
   max-width: 100%;
   height: auto;
   object-fit: cover;
+}
+@media only screen and (max-width: 1800px) {
+  .modal-pet-info img {
+    max-width: 60%;
+  }
 }
 @media only screen and (max-width: 600px) {
   .modal-pet-info img {
@@ -179,6 +194,13 @@ body {
   gap: 2rem;
 }
 
+.featured-pet-info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
 .pet-info__description {
   white-space: nowrap;
   display: flex;
@@ -189,6 +211,11 @@ body {
 
 .pet-info {
   font-size: 1.6rem;
+}
+@media only screen and (max-width: 375px) {
+  .pet-info {
+    font-size: 1.4rem;
+  }
 }
 .pet-info__name {
   font-size: 2rem;
@@ -216,6 +243,13 @@ body {
   padding: 1rem 1.5rem 1rem 1.5rem;
   color: #f9f7f6;
 }
+@media only screen and (max-width: 1200px) {
+  .card-info__container {
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+}
 
 .pet-img {
   height: 30rem;
@@ -225,6 +259,23 @@ body {
 .pet-name {
   color: #f8d451;
   font-size: 1.8rem;
+}
+@media only screen and (max-width: 1200px) {
+  .pet-name {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .pet-breed {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .pet-location {
+    font-size: 2rem;
+  }
 }
 
 .pet-card {
@@ -586,7 +637,7 @@ nav {
 
 .results-section {
   background-color: #f9f7f6;
-  padding: 10rem 0 10rem 0;
+  padding: 5rem 0 5rem 0;
 }
 
 .default-results-heading {

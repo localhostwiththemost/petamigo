@@ -11,7 +11,6 @@ function Results(props) {
   const handlePetCardClick = (pet) => {
     setSelectedPet(pet);
     setShowModal(true);
-    console.log(pet);
   };
 
   const handleModalClose = () => {
