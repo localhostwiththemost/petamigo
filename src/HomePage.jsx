@@ -20,7 +20,6 @@ function HomePage() {
   }, [pets]);
 
   const key = PETFINDER_API_KEY;
-
   const secret = PETFINDER_API_SECRET;
 
   const searchPets = (location) => {
@@ -78,14 +77,6 @@ function HomePage() {
               Not only will you be giving an animal a second chance at a happy
               life, but you'll also be gaining a loyal companion who will always
               be by your side.
-            </p>
-
-            <p className="hero-description">
-              Our adoption process is simple and straightforward, and our team
-              is here to help you every step of the way. From choosing the right
-              pet to providing ongoing support and resources, we're committed to
-              making sure both you and your new furry friend have a smooth
-              transition.
             </p>
 
             <p className="hero-description">

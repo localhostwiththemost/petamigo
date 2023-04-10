@@ -12,6 +12,13 @@
   @media only screen and (max-width: 1200px) {
     flex-direction: column;
   }
+
+& img {
+  @media only screen and (max-width: 600px) {
+  height: 60rem;
+  width: auto;
+  }
+}
 }
 
 .facts-text {
@@ -24,5 +31,6 @@
 
   @media only screen and (max-width: 1200px) {
     text-align: center;
+    padding: 0 3rem 0 3rem
   }
 }

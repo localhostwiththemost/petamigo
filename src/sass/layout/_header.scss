@@ -46,6 +46,10 @@ header {
   margin-right: 3rem;
   margin-left: 3rem;
   gap: 1rem;
+
+  @media only screen and (max-width: 475px) {
+  padding: 8rem 3rem 3rem 3rem;
+  }
 }
 
 .hero-img {
@@ -54,9 +58,13 @@ header {
   right: 5rem;
   object-fit: contain;
 
+  @media only screen and (max-width: 1500px) {
+  height: 40rem;
+  }
+
   @media only screen and (max-width: 1200px) {
     height: 20rem;
-  bottom: -5.6rem;
+    bottom: -5.6rem;
   }
 
   @media only screen and (max-width: 900px) {

@@ -363,17 +363,6 @@ body {
   position: relative; /* Make the search container a positioned container */
 }
 
-.search ion-icon {
-  position: absolute; /* Position the icon absolutely inside the container */
-  left: 1rem; /* Position the icon 1rem from the left edge of the container */
-  top: 50%; /* Position the icon vertically centered */
-  transform: translateY(-50%); /* Adjust the vertical position of the icon */
-  width: 24px;
-  height: 24px;
-  cursor: pointer;
-  color: #000;
-}
-
 .search input {
   background-color: #f9f7f6;
   color: #000;
@@ -394,10 +383,20 @@ body {
 }
 
 .search ion-icon {
+  position: absolute; /* Position the icon absolutely inside the container */
+  left: 1rem; /* Position the icon 1rem from the left edge of the container */
+  top: 50%; /* Position the icon vertically centered */
+  transform: translateY(-50%); /* Adjust the vertical position of the icon */
   width: 24px;
   height: 24px;
   cursor: pointer;
   color: #000;
+}
+@media only screen and (max-width: 600px) {
+  .search ion-icon {
+    width: 18px;
+    height: 18px;
+  }
 }
 .search ion-icon:hover {
   color: #5175f8;
@@ -447,7 +446,7 @@ body {
 .text-container {
   display: flex;
   justify-content: center;
-  padding-bottom: 12rem;
+  padding: 3rem 3rem 12rem 3rem;
 }
 
 .about-text {
@@ -462,8 +461,7 @@ body {
 @media only screen and (max-width: 475px) {
   .about-text {
     font-size: 2rem;
-    font-weight: 500;
-    line-height: 2rem;
+    line-height: 2.2rem;
   }
 }
 
@@ -500,6 +498,12 @@ body {
     flex-direction: column;
   }
 }
+@media only screen and (max-width: 600px) {
+  .facts-container img {
+    height: 60rem;
+    width: auto;
+  }
+}
 
 .facts-text {
   font-size: 2.5rem;
@@ -512,6 +516,7 @@ body {
 @media only screen and (max-width: 1200px) {
   .facts-text {
     text-align: center;
+    padding: 0 3rem 0 3rem;
   }
 }
 
@@ -591,12 +596,22 @@ header {
   margin-left: 3rem;
   gap: 1rem;
 }
+@media only screen and (max-width: 475px) {
+  .hero-container {
+    padding: 8rem 3rem 3rem 3rem;
+  }
+}
 
 .hero-img {
   position: absolute;
   bottom: 0;
   right: 5rem;
   object-fit: contain;
+}
+@media only screen and (max-width: 1500px) {
+  .hero-img {
+    height: 40rem;
+  }
 }
 @media only screen and (max-width: 1200px) {
   .hero-img {
@@ -712,6 +727,7 @@ nav {
   word-wrap: break-word;
   text-align: center;
   color: #f9f7f6;
+  padding: 0 3rem 0 3rem;
 }
 
 .asterisk-text {
