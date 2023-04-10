@@ -3,19 +3,20 @@ header {
   color: $color-main-white;
   height: 100vh;
   position: relative;
+
+  @media only screen and (max-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    //gap: 3rem;
+    position: static;
+  }
 }
 
 .header-content-container {
   display: flex;
   justify-content: center;
-
-  @media only screen and (max-width: 900px) {
-    padding: 10rem;
-  }
-
-  @media only screen and (max-width: 600px) {
-    padding: 30rem 10rem 30rem 10rem;
-  }
 }
 
 .hero-text {
@@ -31,6 +32,10 @@ header {
   max-width: 70rem;
   word-wrap: break-word;
   text-align: center;
+
+  @media only screen and (max-width: 475px) {
+    line-height: 2rem;
+  }
 }
 
 .hero-container {
@@ -47,12 +52,21 @@ header {
   position: absolute;
   bottom: 0;
   right: 5rem;
+  object-fit: contain;
 
   @media only screen and (max-width: 1200px) {
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
+    height: 20rem;
+  bottom: -5.6rem;
+  }
+
+  @media only screen and (max-width: 900px) {
+    position: static;
+    bottom: auto;
+    right: auto;
     height: 50rem;
+    width: 100%;
+    justify-self: flex-end;
+    align-self: center;
+    overflow: hidden;
   }
 }

@@ -18,6 +18,12 @@
   word-wrap: break-word;
   color: $color-main-white;
   text-align: center;
+
+  @media only screen and (max-width: 475px) {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 2rem;
+  }
 }
 
 .nosy-img {
