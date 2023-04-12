@@ -1,3 +1,20 @@
+.auth-section {
+  display: flex;
+  gap: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  background-color: $color-main-white;
+}
+
+.auth-text {
+  color: $color-main-blue;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
 .submit-section {
   background-color: $color-main-blue;
   display: flex;

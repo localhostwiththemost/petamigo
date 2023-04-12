@@ -61,6 +61,27 @@ body {
   background-color: #f8d451;
 }
 
+.google-btn {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: #4285f4;
+  color: #fff;
+  font-family: "Roboto", arial, sans-serif;
+  font-size: 1.4rem;
+  letter-spacing: 0.21px;
+  border: none;
+  border-radius: 8px;
+  padding: 1rem;
+  cursor: pointer;
+}
+
+.google-icon {
+  background-color: #fff;
+  height: 2.5rem;
+  width: 2.5rem;
+}
+
 .modal-bg {
   position: fixed;
   top: 0;
@@ -701,6 +722,23 @@ nav {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.auth-section {
+  display: flex;
+  gap: 10rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 10rem;
+  background-color: #f9f7f6;
+}
+
+.auth-text {
+  color: #5175f8;
+  font-size: 3.5rem;
+  font-weight: 700;
+  text-align: center;
 }
 
 .submit-section {
