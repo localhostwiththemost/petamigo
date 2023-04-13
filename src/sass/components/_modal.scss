@@ -167,3 +167,17 @@
   font-size: 1.8rem;
   font-weight: 600;
 }
+
+// SUBMIT MODAL
+.submit-modal__content {
+  text-align: center;
+  padding: 20rem;
+
+  @media only screen and (max-width: 375px) {
+  padding: 20rem 10rem 10rem 10rem;
+  }
+}
+
+.submit-modal__text {
+  font-size: 3rem;
+}

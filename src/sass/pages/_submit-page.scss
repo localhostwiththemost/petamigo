@@ -1,11 +1,16 @@
 .auth-section {
+  padding: 0 5rem 5rem 5rem;
+  background-color: $color-main-white;
+  height: 100vh;
+}
+
+.auth-content {
   display: flex;
-  gap: 10rem;
+  gap: 6rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 10rem;
-  background-color: $color-main-white;
+  padding-top: 10rem;
 }
 
 .auth-text {
@@ -39,11 +44,11 @@
   word-wrap: break-word;
   text-align: center;
   color: $color-main-white;
-  padding:  0 3rem 0 3rem;
+  padding: 0 3rem 0 3rem;
 }
 
 .asterisk-text {
-    color: $color-mustard-yellow;
-    font-size: 1.8rem;
-    font-size: 600;
+  color: $color-mustard-yellow;
+  font-size: 1.8rem;
+  font-size: 600;
 }

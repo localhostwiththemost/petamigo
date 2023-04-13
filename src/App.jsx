@@ -24,7 +24,7 @@ function App() {
 
   return (
     <>
-      <Nav />
+      <Nav loggedIn={loggedIn}  />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route

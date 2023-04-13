@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addPet } from "./petCollection.js";
 import { db } from "./firebase.js";
+import SubmitModal from "./SubmitModal.jsx";
 
 function UploadForm() {
   const [name, setName] = useState("");
@@ -12,6 +13,7 @@ function UploadForm() {
   const [phone, setPhone] = useState("");
   const [fileUpload, setFileUpload] = useState(null);
   const [fileUrl, setFileUrl] = useState("");
+  const [showModal, setShowModal] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -22,12 +24,14 @@ function UploadForm() {
       reader.onload = () => {
         petData.imageUrl = reader.result;
         addPet(db, petData);
+        setShowModal(true);
       };
       reader.onerror = (error) => {
         console.error("Error: ", error);
       };
     } else {
       addPet(db, petData);
+      setShowModal(true);
     }
     setName("");
     setGender("");
@@ -37,6 +41,10 @@ function UploadForm() {
     setPhone("");
     setFileUpload(null);
     setFileUrl("");
+  };
+
+  const handleModalClose = () => {
+    setShowModal(false);
   };
 
   return (
@@ -99,6 +107,7 @@ function UploadForm() {
 
         <button>Submit</button>
       </form>
+      {showModal && <SubmitModal onClose={handleModalClose} />}
     </>
   );
 }
