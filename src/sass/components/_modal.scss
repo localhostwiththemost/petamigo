@@ -10,7 +10,7 @@
 
 .modal {
   background-color: $color-main-white;
-  width: 80rem;
+  width: 65rem;
   height: 50rem;
   border-radius: $default-border-radius;
   position: fixed;
@@ -24,16 +24,17 @@
   animation: animate 0.3s;
 
   @media only screen and (max-width: 900px) {
-    height: 60rem;
-  }
-
-  @media only screen and (max-width: 600px) {
-    width: 60rem;
     height: 50rem;
   }
 
+  @media only screen and (max-width: 675px) {
+    width: 60rem;
+    height: 40rem;
+  }
+
   @media only screen and (max-width: 375px) {
-  width: 45rem;
+  width: 35rem;
+  height: 25rem;
   }
 }
 
@@ -92,7 +93,7 @@
 .modal-pet-info {
   display: flex;
   flex-direction: row;
-  gap: 5rem;
+  gap: 2rem;
 
   @media only screen and (max-width: 600px) {
   gap: 3rem;

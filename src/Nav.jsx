@@ -28,7 +28,7 @@ function Nav({ loggedIn }) {
           {" "}
           <img
             className="google-icon"
-            src="src/images/google-icon.webp"
+            src="images/google-icon.webp"
             alt="Google logo"
           />
           Sign Out

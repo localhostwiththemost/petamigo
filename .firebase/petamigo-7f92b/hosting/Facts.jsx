@@ -29,7 +29,7 @@ function Facts() {
               srcSet="src/images/winter-compressed.webp"
             />
             <img
-              src="src/images/winter-compressed.webp"
+              src="images/winter-compressed.webp"
               alt="A German Shepherd"
             />
           </picture>

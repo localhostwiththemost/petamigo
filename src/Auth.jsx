@@ -22,7 +22,7 @@ export const Auth = () => {
           <button className="google-btn" onClick={signInWithGoogle}>
             <img
               className="google-icon"
-              src="src/images/google-icon.webp"
+              src="images/google-icon.webp"
               alt="Google logo"
             />{" "}
             Sign In With Google

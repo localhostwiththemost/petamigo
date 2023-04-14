@@ -142,7 +142,7 @@ function HomePage() {
         </div>
 
         <img
-          src="src/images/bandana-compressed.webp"
+          src="images/bandana-compressed.webp"
           alt="A German Shepherd"
           className="hero-img"
         />
@@ -184,7 +184,7 @@ function HomePage() {
         </div>
 
         <img
-          src="src/images/nosy-compressed.webp"
+          src="images/nosy-compressed.webp"
           alt="A very nosy german shepherd"
           className="nosy-img"
         />

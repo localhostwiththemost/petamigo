@@ -22,17 +22,7 @@ function Facts() {
     <>
       <section className="facts-section">
         <div className="facts-container">
-          <picture>
-            <source media="(max-width: 600px)" srcSet="src/images/winter-compressed-small.webp" />
-            <source
-              media="(min-width: 601px)"
-              srcSet="src/images/winter-compressed.webp"
-            />
-            <img
-              src="src/images/winter-compressed.webp"
-              alt="A German Shepherd"
-            />
-          </picture>
+          <img src="images/winter-compressed.webp" alt="A German Shepherd" />
 
           <p className="facts-text">{fact}</p>
         </div>
