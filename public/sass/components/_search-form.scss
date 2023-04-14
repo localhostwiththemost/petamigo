@@ -1,0 +1,47 @@
+.icon-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  position: relative; /* Make the search container a positioned container */
+}
+
+.search input {
+  background-color: $color-main-white;
+  color: #000;
+  font-size: 2rem;
+  border: none;
+  border-radius: 10rem;
+  height: 4rem;
+  padding-inline-start: 5rem;
+  padding-inline-end: 5rem;
+  outline: 0;
+  flex: 1;
+  align-self: center;
+
+  @media only screen and (max-width: 1500px) {
+    width: 75%;
+  }
+}
+
+.search ion-icon {
+  position: absolute; /* Position the icon absolutely inside the container */
+  left: 1rem; /* Position the icon 1rem from the left edge of the container */
+  top: 50%; /* Position the icon vertically centered */
+  transform: translateY(-50%); /* Adjust the vertical position of the icon */
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  color: #000;
+
+  @media only screen and (max-width: 600px) {
+    width: 18px;
+    height: 18px;
+  }
+
+  &:hover {
+    color: $color-main-blue;
+  }
+}

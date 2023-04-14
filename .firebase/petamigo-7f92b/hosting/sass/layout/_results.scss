@@ -1,0 +1,31 @@
+.results-section {
+  background-color: $color-main-white;
+  padding: 5rem 0 5rem 0;
+}
+
+.default-results-heading {
+  text-align: center;
+  font-size: 3rem;
+  color: $color-main-blue;
+}
+
+.petcard-container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.empty {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

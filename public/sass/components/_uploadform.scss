@@ -1,0 +1,37 @@
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1rem;
+
+  & button {
+    margin-top: 2rem;
+    border-radius: 10rem;
+    background-color: $color-main-white;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $color-mustard-yellow;
+    }
+  }
+
+  & input {
+    background-color: $color-main-white;
+    color: #000;
+    font-size: 2rem;
+    border: none;
+    border-radius: 10rem;
+    height: 4rem;
+    padding-inline-start: 3rem;
+    padding-inline-end: 3rem;
+    padding: 0.5rem 1rem 0.5rem 1rem;
+    outline: 0;
+    flex: 1;
+    align-self: center;
+  }
+}

@@ -1,0 +1,39 @@
+nav {
+  padding: 1rem 2rem 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background-color: $color-main-blue;
+}
+
+.logo-link {
+  text-decoration: none;
+}
+
+.nav-title {
+  font-size: 3rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  color: $color-main-white;
+}
+
+.title-icon {
+  display: inline-flex;
+  align-items: center;
+  transform: rotate(17deg);
+}
+
+.nav-link {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: $color-main-white;
+  text-decoration: none;
+
+  &:hover {
+    color: $color-mustard-yellow;
+  }
+}

@@ -1,0 +1,183 @@
+.modal-bg {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.modal {
+  background-color: $color-main-white;
+  width: 80rem;
+  height: 50rem;
+  border-radius: $default-border-radius;
+  position: fixed;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  -webkit-animation: animate 0.3s;
+  animation: animate 0.3s;
+
+  @media only screen and (max-width: 900px) {
+    height: 60rem;
+  }
+
+  @media only screen and (max-width: 600px) {
+    width: 60rem;
+    height: 50rem;
+  }
+
+  @media only screen and (max-width: 375px) {
+  width: 45rem;
+  }
+}
+
+@-webkit-keyframes animate {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes animate {
+  from {
+    -webkit-transform: scale(0.5);
+    transform: translate(-50%, -50%) scale(0.5);
+  }
+  to {
+    -webkit-transform: scale(1);
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.modal > ion-icon {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  font-size: 3rem;
+  color: #000;
+  cursor: pointer;
+}
+
+.modal > ion-icon:hover {
+  color: red;
+}
+
+.modal-content {
+  position: fixed;
+  top: 50%;
+  left: 40%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+
+  @media only screen and (max-width: 600px) {
+  left: 42%;
+  }
+
+  @media only screen and (max-width: 600px) {
+  left: 36%;
+  }
+}
+
+.modal-pet-info {
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+
+  @media only screen and (max-width: 600px) {
+  gap: 3rem;
+  }
+
+  @media only screen and (max-width: 375px) {
+  gap: 1rem;
+  }
+}
+
+.modal-pet-info img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+
+  @media only screen and (max-width: 1800px) {
+  max-width: 60%;
+  }
+
+  @media only screen and (max-width: 600px) {
+    max-width: 50%;
+  }
+}
+
+.pet-info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.featured-pet-info__container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.pet-info__description {
+  white-space: nowrap;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  color: #000;
+}
+
+.pet-info {
+  font-size: 1.6rem;
+  @media only screen and (max-width: 375px) {
+  font-size: 1.4rem;
+  }
+
+
+  &__name {
+    font-size: 2rem;
+    color: $color-main-blue;
+  }
+
+  &__link {
+    text-decoration: none;
+    color: $color-main-blue;
+  }
+}
+
+.learnmore-link {
+  text-decoration: none;
+  background-color: $color-main-blue;
+  color: $color-main-white;
+  text-align: center;
+  padding: 1rem;
+  border-radius: $default-border-radius;
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+// SUBMIT MODAL
+.submit-modal__content {
+  text-align: center;
+  padding: 20rem;
+
+  @media only screen and (max-width: 375px) {
+  padding: 20rem 10rem 10rem 10rem;
+  }
+}
+
+.submit-modal__text {
+  font-size: 3rem;
+}
