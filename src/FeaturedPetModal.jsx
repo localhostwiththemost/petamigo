@@ -29,8 +29,14 @@ function FeaturedPetModal({ selectedPet, onClose }) {
                       <a
                         href={`mailto:${selectedPet.email}`}
                         className="pet-info__link"
+                        style={{
+                          display: "inline-block",
+                          verticalAlign: "middle",
+                          lineHeight: "1",
+                          marginLeft: "0.2em",
+                        }}
                       >
-                        {selectedPet.email}
+                        <ion-icon name="mail-outline"></ion-icon>
                       </a>
                     </h2>
                     <h2 className="pet-info">

@@ -102,20 +102,19 @@ body {
   z-index: 1;
   top: 50%;
   left: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   -webkit-animation: animate 0.3s;
   animation: animate 0.3s;
 }
 @media only screen and (max-width: 900px) {
   .modal {
-    height: 50rem;
+    width: 55rem;
+    height: 40rem;
   }
 }
 @media only screen and (max-width: 675px) {
   .modal {
-    width: 60rem;
+    width: 40rem;
     height: 40rem;
   }
 }
@@ -128,21 +127,17 @@ body {
 
 @-webkit-keyframes animate {
   from {
-    -webkit-transform: scale(0.5);
     transform: translate(-50%, -50%) scale(0.5);
   }
   to {
-    -webkit-transform: scale(1);
     transform: translate(-50%, -50%) scale(1);
   }
 }
 @keyframes animate {
   from {
-    -webkit-transform: scale(0.5);
     transform: translate(-50%, -50%) scale(0.5);
   }
   to {
-    -webkit-transform: scale(1);
     transform: translate(-50%, -50%) scale(1);
   }
 }
@@ -163,8 +158,6 @@ body {
   position: fixed;
   top: 50%;
   left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
 @media only screen and (max-width: 600px) {
@@ -197,6 +190,7 @@ body {
 .modal-pet-info img {
   max-width: 100%;
   height: auto;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 @media only screen and (max-width: 1800px) {

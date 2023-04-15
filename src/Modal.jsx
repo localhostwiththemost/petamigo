@@ -22,21 +22,23 @@ function Modal({ selectedPet, onClose }) {
                   <div className="pet-info__description">
                     <h1 className="pet-info__name">{selectedPet.name}</h1>
                     <h2 className="pet-info">{selectedPet.gender}</h2>
-                    <h2 className="pet-info">
-                      {selectedPet.breeds.secondary
-                        ? `${selectedPet.breeds.primary}/${selectedPet.breeds.secondary}`
-                        : `${selectedPet.breeds.primary}`}
-                    </h2>
+                    <h2 className="pet-info">{selectedPet.breeds.primary}</h2>
                     <h2 className="pet-info">{`${selectedPet.contact.address.city}, ${selectedPet.contact.address.state}`}</h2>
                     <h2 className="pet-info">
                       Email:{" "}
-                      <a
-                        href={`mailto:${selectedPet.contact.email}`}
-                        className="pet-info__link"
-                      >
-                        {selectedPet.contact.email}
-                      </a>
+                      {selectedPet.contact.email ? (
+                        <a
+                          href={`mailto:${selectedPet.contact.email}`}
+                          className="pet-info__link"
+                          style={{ display: "inline-block", verticalAlign: "middle", lineHeight: "1", marginLeft: "0.2em" }}
+                        >
+                          <ion-icon name="mail-outline"></ion-icon>
+                        </a>
+                      ) : (
+                        "N/A"
+                      )}
                     </h2>
+
                     <h2 className="pet-info">
                       Phone:{" "}
                       {selectedPet.contact.phone ? (
