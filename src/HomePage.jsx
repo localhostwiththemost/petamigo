@@ -10,11 +10,12 @@ function HomePage() {
   const [pets, setPets] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [loading, setLoading] = useState(null);
+  const [error, setError] = useState(null);
   const resultsRef = useRef(null);
 
   // Scrolls to Results section when user searches
   useEffect(() => {
-    if (pets.length > 0 && resultsRef.current) {
+    if (pets && pets.length > 0 && resultsRef.current) {
       resultsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [pets]);
@@ -23,6 +24,33 @@ function HomePage() {
   const secret = PETFINDER_API_SECRET;
 
   const searchPets = (location) => {
+    // Validate location
+    const isValidLocation =
+      // This regex matches a valid zip code in the United States, including optional 4-digit extension separated by a hyphen or space
+      /^\d{5}(?:[-\s]\d{4})?$/.test(location) ||
+      // This regex matches a string in the format of "City, State", where City and State can consist of any combination of alphabetical characters and spaces
+      /^[a-zA-Z\s]+,\s*[a-zA-Z\s]{2,}$/.test(location);
+
+    // Check if the location matches the city, state format but without a space after the comma
+    const isInvalidCityStateFormat = /^[a-zA-Z\s]+,[a-zA-Z]{2,}$/.test(
+      location
+    );
+
+    if (!isValidLocation) {
+      const errorMessage =
+        "Please enter a valid location (zipcode or city, state).";
+      setLoading(false);
+      setError(errorMessage);
+      throw new Error(
+        "Please enter a valid location (zipcode or city, state)."
+      );
+    } else if(isInvalidCityStateFormat) {
+      const errorMessage = "Please enter the city, state format with a space after the comma.";
+    setLoading(false);
+    setError(errorMessage);
+    throw new Error(errorMessage);
+    }
+
     setLoading(true);
     fetch("https://api.petfinder.com/v2/oauth2/token", {
       method: "POST",
@@ -56,6 +84,7 @@ function HomePage() {
       .then(function (data) {
         setLoading(false);
         setPets(data.animals);
+        setError("");
       });
   };
 
@@ -138,6 +167,18 @@ function HomePage() {
                 </form>
               </div>
             </div>
+            {error && (
+              <p
+                style={{
+                  color: "red",
+                  alignSelf: "center",
+                  fontSize: "16px ",
+                  fontWeight: "600",
+                }}
+              >
+                {error}
+              </p>
+            )}
           </div>
         </div>
 
