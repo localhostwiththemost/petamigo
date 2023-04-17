@@ -4,6 +4,7 @@ import { PETFINDER_API_KEY, PETFINDER_API_SECRET } from "./env";
 import FeaturedPets from "./FeaturedPets";
 import Results from "./Results";
 import Facts from "./Facts";
+import ScrollToTop from "./ScrollToTop";
 
 function HomePage() {
   const [selected, setSelected] = useState("dog");
@@ -19,6 +20,12 @@ function HomePage() {
       resultsRef.current.scrollIntoView({ behavior: "smooth" });
     }
   }, [pets]);
+
+  useEffect(() => {
+    if (error && resultsRef.current) {
+      resultsRef.current.scrollIntoView({ behavior: "smooth" });
+    }
+  }, [error]);
 
   const key = PETFINDER_API_KEY;
   const secret = PETFINDER_API_SECRET;
@@ -39,16 +46,15 @@ function HomePage() {
     if (!isValidLocation) {
       const errorMessage =
         "Please enter a valid location (zipcode or city, state).";
-      setLoading(false);
       setError(errorMessage);
       throw new Error(
         "Please enter a valid location (zipcode or city, state)."
       );
-    } else if(isInvalidCityStateFormat) {
-      const errorMessage = "Please enter the city, state format with a space after the comma.";
-    setLoading(false);
-    setError(errorMessage);
-    throw new Error(errorMessage);
+    } else if (isInvalidCityStateFormat) {
+      const errorMessage =
+        "Please enter the city, state format with a space after the comma.";
+      setError(errorMessage);
+      throw new Error(errorMessage);
     }
 
     setLoading(true);
@@ -90,6 +96,7 @@ function HomePage() {
 
   return (
     <>
+      <ScrollToTop />
       <header>
         <div className="header-content-container">
           <div className="hero-container">
@@ -167,18 +174,6 @@ function HomePage() {
                 </form>
               </div>
             </div>
-            {error && (
-              <p
-                style={{
-                  color: "red",
-                  alignSelf: "center",
-                  fontSize: "16px ",
-                  fontWeight: "600",
-                }}
-              >
-                {error}
-              </p>
-            )}
           </div>
         </div>
 
@@ -190,7 +185,7 @@ function HomePage() {
       </header>
 
       <div ref={resultsRef}>
-        <Results pets={pets} loading={loading} />
+        <Results pets={pets} loading={loading} error={error} />
       </div>
 
       <Facts />

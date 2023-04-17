@@ -21,7 +21,9 @@ function Results(props) {
   return (
     <>
       <section className="results-section">
-        {props.loading === true ? (
+        {props.error ? (
+          <p className="error">{props.error}</p>
+        ) : props.loading === true ? (
           <div className="empty">
             <Loader />
           </div>

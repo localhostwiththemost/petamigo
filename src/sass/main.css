@@ -433,6 +433,15 @@ body {
   color: #5175f8;
 }
 
+.error {
+  color: red;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+  font-size: 3rem;
+  padding: 5rem 3rem 5rem 3rem;
+}
+
 .upload-form {
   display: flex;
   flex-direction: column;

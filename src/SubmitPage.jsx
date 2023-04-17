@@ -1,11 +1,13 @@
 import React from "react";
 import { Auth } from "./Auth";
+import ScrollToTop from "./ScrollToTop";
 import UploadForm from "./UploadForm";
 
 function SubmitPage({loggedIn}) {
 
   return (
     <>
+      <ScrollToTop />
       {!loggedIn ? (
         <Auth />
       ) : (
