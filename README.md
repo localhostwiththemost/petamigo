@@ -24,7 +24,7 @@ This application:
 - JavaScript
 - React
 
-# Live
+## Live
 
 https://petamigo-7f92b.web.app/
  
