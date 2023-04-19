@@ -317,10 +317,7 @@ body {
   border-radius: 12px;
   overflow: hidden;
   border: none;
-  -webkit-transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  -o-transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0, 1);
-  -webkit-box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 13px 10px -7px rgba(0, 0, 0, 0.1);
   cursor: pointer;
   background-color: #5175f8;
@@ -334,10 +331,7 @@ body {
 }
 
 .pet-card:hover {
-  -webkit-box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 30px 18px -8px rgba(0, 0, 0, 0.1);
-  -webkit-transform: scale(1.05, 1.05);
-  -ms-transform: scale(1.05, 1.05);
   transform: scale(1.05, 1.05);
 }
 
@@ -350,6 +344,7 @@ body {
 .pet-card div:nth-of-type(2) img {
   max-width: 100%;
   max-height: 100%;
+  -o-object-fit: cover;
   object-fit: cover;
 }
 
@@ -401,7 +396,9 @@ body {
   border: none;
   border-radius: 10rem;
   height: 4rem;
+  -webkit-padding-start: 5rem;
   padding-inline-start: 5rem;
+  -webkit-padding-end: 5rem;
   padding-inline-end: 5rem;
   outline: 0;
   flex: 1;
@@ -469,7 +466,9 @@ body {
   border: none;
   border-radius: 10rem;
   height: 4rem;
+  -webkit-padding-start: 3rem;
   padding-inline-start: 3rem;
+  -webkit-padding-end: 3rem;
   padding-inline-end: 3rem;
   padding: 0.5rem 1rem 0.5rem 1rem;
   outline: 0;
@@ -646,6 +645,7 @@ header {
   position: absolute;
   bottom: 0;
   right: 5rem;
+  -o-object-fit: contain;
   object-fit: contain;
 }
 @media only screen and (max-width: 1500px) {
@@ -676,6 +676,7 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;

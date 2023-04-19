@@ -47,7 +47,7 @@ header {
   gap: 1rem;
 
   @media only screen and (max-width: 475px) {
-  padding: 8rem 3rem 3rem 3rem;
+    padding: 8rem 3rem 3rem 3rem;
   }
 }
 
@@ -55,10 +55,11 @@ header {
   position: absolute;
   bottom: 0;
   right: 5rem;
+  -o-object-fit: contain;
   object-fit: contain;
 
   @media only screen and (max-width: 1500px) {
-  height: 40rem;
+    height: 40rem;
   }
 
   @media only screen and (max-width: 1200px) {
